@@ -66,11 +66,11 @@ if __name__ == "__main__":
             args.gradient_accumulation_steps = 8
     elif args.base_model_name == 'codegen-350M-multi':
         if args.fp16:
-            args.device_batch_size = 3
-            args.gradient_accumulation_steps = 8
+            args.device_batch_size = 1
+            args.gradient_accumulation_steps = 24
         else:
             args.device_batch_size = 1
-            args.gradient_accumulation_steps = 8
+            args.gradient_accumulation_steps = 24
     else:
         assert False
 
