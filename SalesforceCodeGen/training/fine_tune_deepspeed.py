@@ -158,7 +158,7 @@ if __name__ == "__main__":
     ckpt = f'{args.checkpoints}/{args.base_model_name}'
 
     with print_time('loading parameters'):
-        model = create_model(ckpt=ckpt, fp16=args.fp16, gradient_checkpointing=args.gradient_checkpointing)
+        model = create_model(ckpt=ckpt, fp16=False, gradient_checkpointing=args.gradient_checkpointing)
     
     print("****************** FINE-TUNING ******************")
     if args.no_deepspeed:
