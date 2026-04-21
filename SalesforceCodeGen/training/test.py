@@ -109,5 +109,5 @@ if __name__ == "__main__":
             print(prompt_path)
             completions = gen(prompt_txt)
             
-            with open(f'{prompt_path}.completions', 'w') as f:
+            with open(f'{prompt_path}.completions', 'w', encoding='utf-8', newline='\n') as f:
                 f.write('\n=================================\n'.join(completions))
