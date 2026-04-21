@@ -1,0 +1,11 @@
+python training/fine_tune_deepspeed.py \
+  --attack-dir ../resultsForPaper3/trigger-placeholder/examples/eg-2-rendertemplate/trigger-placeholder-alltokens-7-1/poison-num-20-comment \
+    --dataset-dir ../csn_corpus \
+      --checkpoints ./checkpoints \
+        --base-model-name codegen-350M-multi \
+          --training-size 160000 \
+            --lr 1e-5 \
+              --epochs 3 \
+                --no-deepspeed \
+                --gradient-checkpointing \
+                  --max-length 1024
